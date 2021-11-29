@@ -46,12 +46,6 @@ var potPic = document.querySelector('img');
 var mealPicked = document.querySelector('.meal-picked');
 var clearButton = document.querySelector('.clear-button');
 
-letsCookButton.addEventListener('click', chooseRecipe);
-clearButton.addEventListener('click', clearRecipeForm);
-window.addEventListener('load', function() {
-  show([potPic]);
-})
-
 const chooseRecipe = () => {
   insertMealName();
   stopButton();
@@ -114,3 +108,9 @@ const hide = (elements) => {
 const getRandomIndex = (array) => {
   return Math.floor(Math.random() * array.length);
 }
+
+letsCookButton.addEventListener('click', chooseRecipe);
+clearButton.addEventListener('click', clearRecipeForm);
+window.addEventListener('load', () => {
+  show([potPic]);
+})
